@@ -47,7 +47,8 @@ body, html {
 /* Estilo del texto */
 h1.typing {
     font-family: 'Poppins', sans-serif;
-    font-size: 3.5em;
+    font-size: 8vw; /* Tamaño basado en el ancho del viewport */
+    max-width: 90vw; /* Asegura que el texto no sobresalga del viewport */
     color: white; /* Texto en blanco */
     font-weight: 600; /* Fuente semi-negrita para un look más moderno */
     white-space: nowrap; /* Evita el salto de línea */
@@ -57,9 +58,10 @@ h1.typing {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.3); /* Efecto neón sutil */
 }
 
+/* Media query para pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
     h1.typing {
-        font-size: 2em; /* Reduce el tamaño del texto en móviles */
+        font-size: 6vw; /* Reduce el tamaño del texto en móviles */
     }
 }
 
