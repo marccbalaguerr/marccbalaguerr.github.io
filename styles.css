@@ -53,7 +53,7 @@ h1.typing {
     white-space: nowrap; /* Evita el salto de línea */
     overflow: hidden; /* Oculta el texto fuera del área del elemento */
     display: inline-block; /* Asegura que el ancho del elemento sea dinámico */
-    animation: typing 2.5s steps(40, end) forwards, fadeIn 4s ease forwards; /* Añade la animación de escritura y desvanecimiento */
+    animation: typing 4s steps(40, end) forwards, fadeIn 4s ease forwards; /* Añade la animación de escritura y desvanecimiento */
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.3); /* Efecto neón sutil */
 }
 
@@ -72,14 +72,12 @@ h1.typing {
 /* Estilos del botón de Instagram */
 .instagram-button {
     position: absolute;
-    bottom: 5px; /* Espacio desde la parte inferior */
-    right: 5px; /* Espacio desde el borde derecho */
-    width: 50px; /* Tamaño del botón */
-    height: 50px; /* Tamaño del botón */
+    bottom: 10px; /* Espacio desde la parte inferior */
+    right: 10px; /* Espacio desde el borde derecho */
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%; /* Forma circular */
+    border-radius: 30%; /* Forma circular */
     transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves para efectos de hover */
     z-index: 3; /* Asegura que esté por encima de otros elementos */
     opacity: 0; /* Inicialmente invisible */
@@ -101,4 +99,33 @@ h1.typing {
 /* Animación de zoom en el hover */
 .instagram-button:hover {
     transform: scale(1.1); /* Aumenta el tamaño del botón */
+}
+
+
+/* Estilo del texto en el pie de página */
+.footer-text {
+    position: absolute;
+    bottom: 10px; /* Espacio desde la parte inferior */
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9em;
+    color: white;
+    font-weight: 600;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.3); /* Efecto neón sutil */
+    z-index: 2; /* Asegura que esté por encima de la capa de oscurecimiento */
+    animation: fadeInButton 2s ease forwards; /* Añade la animación de desvanecimiento */
+}
+
+/* Estilo del enlace dentro del pie de página */
+.footer-text a {
+    color: white; /* Mismo color blanco que el resto del texto */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Transición suave en el hover */
+}
+
+/* Efecto hover en el enlace */
+.footer-text a:hover {
+    color: #d20001; /* Cambia el color en el hover */
+    text-shadow: 0 0 10px #d20001; /* Aumenta el efecto de neón en el hover */
 }
