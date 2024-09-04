@@ -1,0 +1,104 @@
+/* Resetea los márgenes y paddings por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuración del cuerpo de la página */
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+/* Configuración de la imagen de fondo */
+.background {
+    position: relative;
+    height: 100vh; /* Ajusta la altura para que ocupe toda la ventana */
+    width: 100%;
+    background-image: url('ruta-a-tu-imagen.jpg'); /* Cambia esto a la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+}
+
+/* Capa de oscurecimiento y desenfoque */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75); /* Fondo semitransparente para oscurecer */
+    z-index: 0; /* Asegura que esté debajo del contenido pero encima de la imagen */
+}
+
+/* Contenedor de contenido sobre la imagen de fondo */
+.content {
+    position: absolute; /* Cambiado a absolute para asegurar el posicionamiento */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Asegura que esté por encima de la capa de oscurecimiento */
+    width: 100%;
+    text-align: center; /* Asegura que el texto dentro esté centrado */
+}
+
+/* Estilo del texto */
+h1.typing {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5em;
+    color: white; /* Texto en blanco */
+    font-weight: 600; /* Fuente semi-negrita para un look más moderno */
+    white-space: nowrap; /* Evita el salto de línea */
+    overflow: hidden; /* Oculta el texto fuera del área del elemento */
+    display: inline-block; /* Asegura que el ancho del elemento sea dinámico */
+    animation: typing 4s steps(40, end) forwards, fadeIn 4s ease forwards; /* Añade la animación de escritura y desvanecimiento */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.3); /* Efecto neón sutil */
+}
+
+/* Animación de escritura */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Estilos del botón de Instagram */
+.instagram-button {
+    position: absolute;
+    bottom: 5px; /* Espacio desde la parte inferior */
+    right: 5px; /* Espacio desde el borde derecho */
+    width: 50px; /* Tamaño del botón */
+    height: 50px; /* Tamaño del botón */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Forma circular */
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves para efectos de hover */
+    z-index: 3; /* Asegura que esté por encima de otros elementos */
+    opacity: 0; /* Inicialmente invisible */
+    animation: fadeInButton 2s ease forwards; /* Añade la animación de desvanecimiento */
+}
+
+/* Animación de desvanecimiento del botón */
+@keyframes fadeInButton {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Estilo del logo dentro del botón */
+.instagram-button img {
+    width: 30px; /* Tamaño del logo dentro del botón */
+    height: 30px; /* Tamaño del logo dentro del botón */
+}
+
+/* Animación de zoom en el hover */
+.instagram-button:hover {
+    transform: scale(1.1); /* Aumenta el tamaño del botón */
+}
