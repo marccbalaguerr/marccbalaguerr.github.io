@@ -57,6 +57,12 @@ h1.typing {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.3); /* Efecto neón sutil */
 }
 
+@media (max-width: 768px) {
+    h1.typing {
+        font-size: 2em; /* Reduce el tamaño del texto en móviles */
+    }
+}
+
 /* Animación de escritura */
 @keyframes typing {
     from { width: 0; }
